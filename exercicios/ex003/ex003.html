@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font: normal 20pt Arial;
+            margin: 0%;
+        }
+
+        div.titulo {
+            background-color: rgb(243, 243, 69);
+            border: none 1px black;
+            max-width: 400px;
+            margin-left: 6%;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.295);
+        }
+
+        div.texto {
+            background-color: blueviolet;
+            color: rgb(243, 243, 69);
+            max-width: 300px;
+            margin-left: 1%;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.295);  
+        }
+
+        h1 {
+            color: blueviolet;
+            text-align: center;
+        }
+
+        section {
+            background-color: white;
+            max-width: 400px;
+            font-size: 1em;
+            margin-left: 6%;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Olá, mundo!</h1>
+    </div>
+    <div class="texto">
+        <p>Já me livrei da maldição</p>
+    </div>
+
+    <section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quam, consequatur dolorum natus optio iusto dolore facilis velit, quas doloribus dolorem iste animi? Obcaecati totam quas molestias. Accusamus, voluptatum pariatur?</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vel velit eligendi numquam, quis quidem. Asperiores ut officiis necessitatibus adipisci. Tempore deserunt repellat, voluptatibus tenetur cupiditate iusto asperiores animi error.</p>
+    </section>
+
+    <script>
+       var n1 = Number(window.prompt('Digite um numero:')) // Se coloca o number, pois prompt sempre retorna uma String.
+       var n2 = Number(window.prompt('Digite outro numero:'))
+       var s = n1 + n2
+       window.alert('A soma dos valores é: ' + String(s)) // Conversão de number para string
+    </script>
+</body>
+</html>
