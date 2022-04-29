@@ -5,22 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pais de origem</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            width: 100px;
+        }
+
+        input#button {
+            width: 70px;
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>Brasileiro ou Extrangeiro?</h1>
+    <h1>Brasileiro ou Estrangeiro?</h1>
     Em que país você está? <input type="text" name="pais" id="pais">
-    <input type="button" value="Buscar" onclick="buscar()">
-    <div id="res">
+    <input type="button" value="Buscar" onclick="buscar()" id="button">
+    <div id="nasc">
 
     </div>
 
     <script>
         function buscar() {
             var pais = window.document.querySelector('input#pais')
-            var res = window.document.querySelector('div#res')
-            var nasc = Text(pais.value)
-            res.innerHTML = `<p>Você atualmente está no(a) ${pais}</p>`
-        
+            var nasc = window.document.querySelector('div#nasc')
+            nasc.innerHTML = `<p>Se você está no(a) ${pais.value}</p>`
+            if (pais.value == 'Brasil') {
+                nasc.innerHTML += `<p>Então você é <strong>Brasileiro</strong>.</p>`
+            } else {
+                nasc.innerHTML += `<p>Então você é <strong>Estrangeiro</strong>.</p>`
+            }
         }
     </script>
 </body>
