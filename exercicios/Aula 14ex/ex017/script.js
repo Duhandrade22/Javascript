@@ -1,24 +1,19 @@
-function carregar() {
+function tabuada() {
+    let num = document.getElementById('txtnum')
+    let tab = document.getElementById('seltab')
 
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
-    var data = new Date()
-    //var hora = data.getHours()
-
-    var hora = 21
-    msg.innerHTML = `Agora são ${hora} horas`
-
-    if (hora >= 0 && hora < 12) {
-        //BOM DIA
-        img.src ='imagem/fotomanha.png'
-        document.body.style.background = '#df8910' 
-    } else if (hora >= 12 && hora <18) {
-        //BOA TARDE
-        img.src ='imagem/fototarde.png'
-        document.body.style.background = '#d68d73'
+    if (txtnum.value.length == 0) {
+        window.alert ('Por favor digite um numero!')
     } else {
-        //BOA NOITE
-        img.src ='imagem/fotonoite.png'
-        document.body.style.background = '#403150'
+        let n = Number(txtnum.value)
+        let c = 1
+        tab.innerHTML = ''
+        while (c <= 10) {
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            tab.value = `tab${c}`
+            tab.appendChild(item)
+            c++
+        }
     }
 }
